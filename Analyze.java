@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -43,7 +42,7 @@ public class Analyze {
             else{
                 top2=(char)zhan.peek();
             }
-            //int youxianji=p.priority_matrix[p.pri_map.get(top2)][p.pri_map.get(c_in)];
+
             int youxianji=p.get_priority(top2,c_in);
             if(youxianji==-1){
                 System.out.println('E');
@@ -127,16 +126,7 @@ class Priority{
             {1,1,-1,-1,1,1},
             {0,0,0,0,0,2}
     };
-    Map<Character,Integer> pri_map;
-    Priority(){
-        pri_map=new HashMap<>();
-        pri_map.put('+',0);
-        pri_map.put('*',1);
-        pri_map.put('i',2);
-        pri_map.put('(',3);
-        pri_map.put(')',4);
-        pri_map.put('#',5);
-    }
+
     int get_priority(char a,char b){
         int x = 0,y=0;
         if(a=='+'){
