@@ -9,9 +9,9 @@ public class Analyze {
         String input="";
         zhan.push('#');
         Priority p=new Priority();
-        //Scanner sc=new Scanner(System.in);
-        //String s=sc.nextLine();
-        String s="i+i\n";
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        //String s="i+i\n";
         //input="123";
         int len=s.length();
         input=s.substring(0,len-1);
