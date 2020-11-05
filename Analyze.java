@@ -11,10 +11,10 @@ public class Analyze {
         Priority p=new Priority();
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
-        //String s="i+i\n";
+        //String s="i+i+i\n";
         //input="123";
         int len=s.length();
-        input=s.substring(0,len-1);
+        input=s.substring(0,len);
         input=input+'#';
 
         char c_in=input.charAt(0);
