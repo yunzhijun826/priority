@@ -43,7 +43,8 @@ public class Analyze {
             else{
                 top2=(char)zhan.peek();
             }
-            int youxianji=p.priority_matrix[p.pri_map.get(top2)][p.pri_map.get(c_in)];
+            //int youxianji=p.priority_matrix[p.pri_map.get(top2)][p.pri_map.get(c_in)];
+            int youxianji=p.get_priority(top2,c_in);
             if(youxianji==-1){
                 System.out.println('E');
                 break;
@@ -135,5 +136,45 @@ class Priority{
         pri_map.put('(',3);
         pri_map.put(')',4);
         pri_map.put('#',5);
+    }
+    int get_priority(char a,char b){
+        int x = 0,y=0;
+        if(a=='+'){
+            x=0;
+        }
+        else if(a=='*'){
+            x=1;
+        }
+        else if(a=='i'){
+            x=2;
+        }
+        else if(a=='('){
+            x=3;
+        }
+        else if(a==')'){
+            x=4;
+        }
+        else if(a=='#'){
+            x=5;
+        }
+        if(b=='+'){
+            y=0;
+        }
+        else if(b=='*'){
+            y=1;
+        }
+        else if(b=='i'){
+            y=2;
+        }
+        else if(b=='('){
+            y=3;
+        }
+        else if(b==')'){
+            y=4;
+        }
+        else if(b=='#'){
+            y=5;
+        }
+        return priority_matrix[x][y];
     }
 }
